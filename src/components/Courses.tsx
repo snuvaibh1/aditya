@@ -57,6 +57,9 @@ const Courses = () => {
     }
   ];
 
+  // Google Form link
+  const formLink = "https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform";
+
   return (
     <section id="courses" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -117,13 +120,18 @@ const Courses = () => {
                 ))}
               </ul>
 
-              <button className={`w-full py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-300 ${
-                course.popular
-                  ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:shadow-2xl hover:shadow-yellow-500/30'
-                  : 'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black hover:shadow-2xl hover:shadow-yellow-500/20'
-              }`}>
+              <a
+                href={formLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block text-center w-full py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-300 ${
+                  course.popular
+                    ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:shadow-2xl hover:shadow-yellow-500/30'
+                    : 'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black hover:shadow-2xl hover:shadow-yellow-500/20'
+                }`}
+              >
                 Choose Plan
-              </button>
+              </a>
             </div>
           ))}
         </div>
