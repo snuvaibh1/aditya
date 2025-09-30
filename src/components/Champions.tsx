@@ -51,7 +51,6 @@ const Champions = () => {
       review: {
         text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
         name: "Vajrajeetingh",
-        age: "16"
         role: "Powerlifter",
       },
     },
