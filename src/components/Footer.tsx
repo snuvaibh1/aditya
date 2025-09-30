@@ -50,54 +50,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold text-yellow-400 mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="#programs"
-                  className="text-gray-100 hover:text-yellow-400 transition-colors font-medium"
-                >
-                  Programs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#courses"
-                  className="text-gray-100 hover:text-yellow-400 transition-colors font-medium"
-                >
-                  Courses
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-100 hover:text-yellow-400 transition-colors font-medium"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-100 hover:text-yellow-400 transition-colors font-medium"
-                >
-                  Success Stories
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-100 hover:text-yellow-400 transition-colors font-medium"
-                >
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold text-yellow-400 mb-6">Contact Info</h3>
