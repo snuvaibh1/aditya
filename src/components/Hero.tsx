@@ -131,7 +131,7 @@ const Hero = () => {
                 boxShadow: '0 0 50px rgba(212, 175, 55, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
               }}
               onClick={() =>
-                window.open('https://calendly.com/championlifestyle-yash/30min?month=2025-07', '_blank')
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform?usp=dialog', '_blank')
               }
             >
               <motion.div
