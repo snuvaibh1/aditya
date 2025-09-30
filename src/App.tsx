@@ -19,7 +19,6 @@ function App() {
         <Programs />
         <AthletePage />
         <Champions />
-        <Courses />
         <Testimonials />
         <Footer />
       </div>
