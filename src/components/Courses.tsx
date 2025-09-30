@@ -57,8 +57,8 @@ const Courses = () => {
     }
   ];
 
-  // Google Form link
-  const formLink = "https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform";
+  const formLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform";
 
   return (
     <section id="courses" className="py-20 px-4">
@@ -71,7 +71,7 @@ const Courses = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             <span className="text-gray-100 font-medium">
-              Choose from our specialized training packages designed by expert coaches to help you 
+              Choose from our specialized training packages designed by expert coaches to help you
               achieve your specific fitness goals with personalized guidance and support.
             </span>
           </p>
@@ -82,9 +82,9 @@ const Courses = () => {
             <div
               key={index}
               className={`relative bg-white/15 backdrop-blur-md rounded-3xl p-8 border transition-all duration-500 hover:transform hover:scale-105 shadow-lg shadow-black/50 ${
-                course.popular 
-                  ? 'border-yellow-400 shadow-2xl shadow-yellow-500/30 transform scale-105' 
-                  : 'border-yellow-500/30 hover:border-yellow-500/50'
+                course.popular
+                  ? "border-yellow-400 shadow-2xl shadow-yellow-500/30 transform scale-105"
+                  : "border-yellow-500/30 hover:border-yellow-500/50"
               }`}
             >
               {course.popular && (
@@ -96,7 +96,9 @@ const Courses = () => {
               )}
 
               <div className="text-center mb-8">
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${course.color} mb-4 shadow-lg`}>
+                <div
+                  className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${course.color} mb-4 shadow-lg`}
+                >
                   <course.icon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">{course.name}</h3>
@@ -126,8 +128,8 @@ const Courses = () => {
                 rel="noopener noreferrer"
                 className={`block text-center w-full py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-300 ${
                   course.popular
-                    ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:shadow-2xl hover:shadow-yellow-500/30'
-                    : 'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black hover:shadow-2xl hover:shadow-yellow-500/20'
+                    ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:shadow-2xl hover:shadow-yellow-500/30"
+                    : "border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black hover:shadow-2xl hover:shadow-yellow-500/20"
                 }`}
               >
                 Choose Plan
@@ -136,11 +138,25 @@ const Courses = () => {
           ))}
         </div>
 
+        {/* Contact for custom pricing with phone numbers */}
         <div className="text-center mt-12">
-          <p className="text-gray-200 mb-4 font-medium">Need a custom plan? We've got you covered.</p>
-          <button className="bg-white/20 backdrop-blur-md border border-yellow-500/40 text-yellow-400 px-8 py-3 rounded-full font-medium hover:bg-yellow-500/20 hover:border-yellow-500/60 transition-all duration-300 shadow-lg shadow-black/50">
-            Contact for Custom Pricing
-          </button>
+          <p className="text-gray-200 mb-4 font-medium">
+            Need a custom plan? We've got you covered.
+          </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <a
+              href="tel:+447823711443"
+              className="bg-white/20 backdrop-blur-md border border-yellow-500/40 text-yellow-400 px-8 py-3 rounded-full font-medium hover:bg-yellow-500/20 hover:border-yellow-500/60 transition-all duration-300 shadow-lg shadow-black/50"
+            >
+              Call UK: +44 7823711443
+            </a>
+            <a
+              href="tel:+918452957164"
+              className="bg-white/20 backdrop-blur-md border border-yellow-500/40 text-yellow-400 px-8 py-3 rounded-full font-medium hover:bg-yellow-500/20 hover:border-yellow-500/60 transition-all duration-300 shadow-lg shadow-black/50"
+            >
+              Call India: +91 8452957164
+            </a>
+          </div>
         </div>
       </div>
     </section>
