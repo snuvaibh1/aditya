@@ -50,8 +50,8 @@ const Champions = () => {
       alt: "Champion transformation video 2",
       review: {
         text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
-        name: "Vajrajeet",
-        role: "Powerliftier",
+        name: "Karan Singh",
+        role: "Weightlifter",
       },
     },
     {
@@ -62,6 +62,17 @@ const Champions = () => {
       review: {
         text: "Working with Aditya as my coach has been amazing! He’s helped me stay motivated, challenge myself and I’ve seen noticeable improvements in both my strength and fitness. I really enjoyed the variety and challenges he brought to every session. He always ensured my technique is correct to avoid any sort of injuries and he’s always set up and ready to go with a planned routine. I thoroughly enjoyed working out with him and truly appreciate all the encouragement and expertise he’s shared!",
         name: "Neha Shetty",
+        role: "Fitness Enthusiast",
+      },
+    },
+    {
+      id: 5,
+      type: "image",
+      src: "https://i.imgur.com/CrWE1AW.jpeg",
+      alt: "Palakh Sabarwal - Fitness Enthusiast",
+      review: {
+        text: "Aditya has completely transformed the way I look at fitness. He created a plan that was tailored to my fitness goals, they were challenging but yet comfortable. The best part is that working out with him is like working out with a friend. He is patient, attentive, encouraging and will ensure you push beyond what you think you are capable of. I highly recommend him! 🙌🏻",
+        name: "Palakh Sabarwal",
         role: "Fitness Enthusiast",
       },
     },
