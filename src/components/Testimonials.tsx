@@ -5,57 +5,33 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sanjay Yadav",
-      title: "Fitness Enthusiast",
-      image: "/images/testimonials/WhatsApp Image 2025-09-01 at 12.52.35_77817297.jpg",
-      rating: 5,
-      text: "Adi is an exceptional coach who has helped me achieve incredible results. His easy-going style combined with focus on achieving objectives are his exceptional qualities which dramatically help students like me. The results clearly demonstrate how he has increased my bandwidth and mental strength along with physical capabilities."
+      text: `I still remember the first day Mahika came to train. She was apprehensive and worried, but by the end of the session, she had a big smile. She enjoyed it thoroughly and eagerly looked forward to every session. Under Adi's coaching, she improved her agility, reaction time, and motivation. Her achievements include:
+      - 9th in 47th Maharashtra State Open (Under-13)
+      - 8th in Matunga Gymkhana Open (Under-13)
+      - 3rd in Dunlop Maharashtra State Closed Open
+      She also performed very well in SFA games and Matunga Club Open finals.`
     },
     {
-      name: "Rahul Sharma",
-      title: "Weight Loss Success Story",
-      image: "/images/testimonials/WhatsApp Image 2025-09-01 at 12.52.35_a5a68129.jpg",
-      rating: 5,
-      text: "Taking online sessions and learning from Adi for the past 6 months, my weight has come down from 83 Kg to 74 Kg. It feels so nice, energetic and light on feet. Following a workout regime and the nutritional diet prescribed by Adi including intermittent fasting has been the root cause for these positive results."
+      text: `Being 45 and traveling internationally, maintaining fitness was a challenge. With Adi's coaching, I went from 83kg to 74kg, feeling lighter, energetic, and confident. His workout regime, nutritional guidance, and intermittent fasting plan made all the difference. Beyond physical changes, my mental strength and endurance have increased dramatically.`
     },
     {
-      name: "Priya Patel",
-      title: "Body Transformation Client",
-      image: "/images/testimonials/WhatsApp Image 2025-09-01 at 12.52.35_f0ec8d8d.jpg",
-      rating: 5,
-      text: "While I can mention all the positives that I have gained from Adi, there's also a fun complaint: 'Adi you never told me that I will have to change my wardrobe after 6 months with all my shirts and trousers from 6 months ago having to be donated and refilled with slim fits!'"
+      text: `Adi's coaching is exceptional! His easy-going style, motivational guidance, and focus on results make even senior students feel comfortable while pushing their limits. The positive changes are visible not just in physique but in confidence and overall performance.`
     },
     {
-      name: "yash maurya",
-      title: "Young Athlete",
-      image: "/images/testimonials/WhatsApp Image 2025-09-01 at 12.52.36_7d44035d.jpg",
-      rating: 5,
-      text: "Don't go by his age of 21 years but his inherent quality of teaching and motivating others will put any senior experienced person to shame. Fabulous personality maintaining a perfect V shape physique, muscular structure and excelling in every sport including marathons and weight lifting."
+      text: `One fun complaint: I never expected to have to change my wardrobe after 6 months! All my old shirts and trousers became too loose and had to be replaced. This is proof of the incredible transformation under Adi's guidance.`
     },
     {
-      name: "Vikram Singh",
-      title: "Competitive Athlete",
-      image: "/images/testimonials/WhatsApp Image 2025-09-01 at 12.52.37_a554e254.jpg",
-      rating: 5,
-      text: "Coach Adi has transformed my athletic performance completely. His sport-specific training programs and attention to detail have helped me achieve personal bests I never thought possible. The weekly performance reviews keep me motivated and on track."
-    },
-    {
-      name: "Neha Gupta",
-      title: "Fitness Transformation",
-      image: "/images/testimonials/WhatsApp Image 2025-09-01 at 12.52.35_77817297.jpg",
-      rating: 5,
-      text: "Working with Adi has been life-changing! His personalized approach and constant motivation helped me build confidence both in and out of the gym. The nutrition guidance was exactly what I needed to fuel my workouts and see real results."
+      text: `Adi’s coaching is suitable for athletes of all ages. His techniques help improve agility, speed, strength, and confidence. Whether preparing for competitions or general fitness, the results speak for themselves.`
     }
   ];
 
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(1); // 1 = next, -1 = prev
+  const [direction, setDirection] = useState(1);
 
-  // Auto toggle every 5s
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -69,45 +45,39 @@ const Testimonials = () => {
     setIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  // Slide variants
   const variants = {
-    enter: (direction) => ({
-      x: direction > 0 ? 100 : -100,
-      opacity: 0
+    enter: (dir) => ({
+      x: dir > 0 ? 100 : -100,
+      opacity: 0,
+      scale: 0.95
     }),
     center: {
       x: 0,
-      opacity: 1
+      opacity: 1,
+      scale: 1
     },
-    exit: (direction) => ({
-      x: direction > 0 ? -100 : 100,
-      opacity: 0
+    exit: (dir) => ({
+      x: dir > 0 ? -100 : 100,
+      opacity: 0,
+      scale: 0.95
     })
   };
 
   return (
-    <section className="py-20 px-4 bg-transparent">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Success Stories
-            </span>
-          </h2>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-            <span className="text-gray-100 font-medium">
-              Discover how our clients have transformed their lives through our personalized fitness programs. 
-              Their incredible journeys inspire us every day.
-            </span>
-          </p>
-        </div>
+    <section className="py-20 px-4 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+          Success Stories
+        </h2>
+        <p className="text-gray-300 text-lg mb-16">
+          Discover how our clients have transformed their lives through personalized coaching and dedication. Each story inspires and motivates.
+        </p>
 
-        {/* Carousel */}
-        <div className="relative h-[500px] flex items-center justify-center">
+        <div className="relative h-80 flex items-center justify-center">
           {/* Left Arrow */}
           <button 
-            onClick={handlePrev}
-            className="absolute left-0 z-10 p-3 bg-black/40 rounded-full hover:bg-yellow-500/70 transition"
+            onClick={handlePrev} 
+            className="absolute left-0 z-10 p-3 bg-black/30 rounded-full hover:bg-yellow-500/70 transition"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
@@ -121,57 +91,38 @@ const Testimonials = () => {
               animate="center"
               exit="exit"
               transition={{ duration: 0.6 }}
-              className="w-full max-w-lg group bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-500 relative overflow-hidden shadow-lg shadow-black/50"
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/30 shadow-lg shadow-black/40 w-full max-w-xl relative"
             >
-              {/* Quote icon */}
+              {/* Quote Icon */}
               <div className="absolute top-6 right-6 opacity-20">
-                <Quote className="w-8 h-8 text-yellow-400" />
+                <Quote className="w-10 h-10 text-yellow-400" />
               </div>
 
-              {/* Customer photo */}
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/20 mr-4">
-                  <img 
-                    src={testimonials[index].image} 
-                    alt={`${testimonials[index].name} - Customer testimonial`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-white group-hover:text-yellow-400 transition-colors">
-                    {testimonials[index].name}
-                  </h4>
-                  <p className="text-sm text-gray-200 font-medium">{testimonials[index].title}</p>
-                </div>
-              </div>
-
-              {/* Star rating */}
-              <div className="flex space-x-1 mb-4">
-                {[...Array(testimonials[index].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+              {/* Stars */}
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 mx-0.5" />
                 ))}
               </div>
 
-              {/* Testimonial text */}
-              <p className="text-gray-100 leading-relaxed text-base mb-6 font-medium">
+              <p className="text-gray-100 text-base md:text-lg leading-relaxed font-medium">
                 "{testimonials[index].text}"
               </p>
 
-              {/* Decorative bottom accent */}
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-b-xl"></div>
             </motion.div>
           </AnimatePresence>
 
           {/* Right Arrow */}
           <button 
-            onClick={handleNext}
-            className="absolute right-0 z-10 p-3 bg-black/40 rounded-full hover:bg-yellow-500/70 transition"
+            onClick={handleNext} 
+            className="absolute right-0 z-10 p-3 bg-black/30 rounded-full hover:bg-yellow-500/70 transition"
           >
             <ChevronRight className="w-6 h-6 text-white" />
           </button>
         </div>
 
-        {/* Dots navigation */}
+        {/* Dots */}
         <div className="flex justify-center mt-6 space-x-3">
           {testimonials.map((_, i) => (
             <button
@@ -180,19 +131,9 @@ const Testimonials = () => {
                 setDirection(i > index ? 1 : -1);
                 setIndex(i);
               }}
-              className={`w-3 h-3 rounded-full transition-all ${
-                i === index ? "bg-yellow-400 scale-125" : "bg-gray-500"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all ${i === index ? "bg-yellow-400 scale-125" : "bg-gray-500"}`}
             />
           ))}
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-16">
-          <p className="text-gray-100 mb-6 text-lg font-medium">Ready to start your own transformation story?</p>
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30 hover:scale-105">
-            Join Our Success Community
-          </button>
         </div>
       </div>
     </section>
