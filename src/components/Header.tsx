@@ -48,8 +48,8 @@ const Header = () => {
               Home
             </a>
             <a
-              href="#programs"
-              onClick={(e) => handleNavClick(e, 'programs')}
+              href="#courses"
+              onClick={(e) => handleNavClick(e, 'courses')}
               className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
             >
               Programs
@@ -93,8 +93,8 @@ const Header = () => {
                 Home
               </a>
               <a
-                href="#programs"
-                onClick={(e) => handleNavClick(e, 'programs')}
+                href="#courses"
+                onClick={(e) => handleNavClick(e, 'courses')}
                 className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
               >
                 Programs
