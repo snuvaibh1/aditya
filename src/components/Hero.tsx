@@ -38,7 +38,11 @@ const Hero = () => {
   }, [mouseX, mouseY]);
 
   return (
-    <section id="home" ref={containerRef} className="relative min-h-screen overflow-hidden bg-black">
+    <section
+      id="home"
+      ref={containerRef}
+      className="relative min-h-screen overflow-hidden bg-black"
+    >
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
@@ -90,7 +94,8 @@ const Hero = () => {
           <motion.h1
             className="text-5xl sm:text-7xl lg:text-8xl font-black leading-none"
             style={{
-              background: 'linear-gradient(135deg, #ffffff 0%, #D4AF37 50%, #ffffff 100%)',
+              background:
+                'linear-gradient(135deg, #ffffff 0%, #D4AF37 50%, #ffffff 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -98,10 +103,18 @@ const Hero = () => {
               backgroundSize: '200% auto'
             }}
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0, backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+            }}
             transition={{
               opacity: { duration: 1.2, delay: 1 },
-              backgroundPosition: { duration: 3, ease: 'easeInOut', repeat: Infinity }
+              backgroundPosition: {
+                duration: 3,
+                ease: 'easeInOut',
+                repeat: Infinity
+              }
             }}
           >
             {/* Add your headline here */}
@@ -123,21 +136,32 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 3 }}
           >
+            {/* Begin Transformation Button */}
             <motion.button
-              className="group relative bg-[#C8A766] text-black px-8 py-4 rounded-xl font-bold text-lg overflow-hidden"
+              className="group relative text-black px-8 py-4 rounded-xl font-bold text-lg overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{
-                boxShadow: '0 0 50px rgba(212, 175, 55, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+                background:
+                  'linear-gradient(90deg, #FFD700 0%, #FFB700 50%, #FF8C00 100%)',
+                boxShadow:
+                  '0 0 50px rgba(255, 165, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
               }}
               onClick={() =>
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform?usp=dialog', '_blank')
+                window.open(
+                  'https://calendly.com/championlifestyle-yash/30min?month=2025-07',
+                  '_blank'
+                )
               }
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                 animate={{ x: ['-100%', '100%'] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
+                }}
               />
               <span className="relative z-10 flex items-center justify-center space-x-2">
                 <span>Begin Transformation</span>
@@ -145,12 +169,16 @@ const Hero = () => {
               </span>
             </motion.button>
 
+            {/* Watch Transformations Button */}
             <motion.button
               className="group flex items-center space-x-3 text-white/90 hover:text-white"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() =>
-                window.open('https://youtube.com/shorts/n6abFna2keQ?si=CJbOJE_O6u1zp4r3', '_blank')
+                window.open(
+                  'https://youtube.com/shorts/n6abFna2keQ?si=CJbOJE_O6u1zp4r3',
+                  '_blank'
+                )
               }
             >
               <div className="relative w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:bg-white/20">
@@ -161,7 +189,9 @@ const Hero = () => {
                   transition={{ duration: 1.5, repeat: Infinity }}
                 />
               </div>
-              <span className="font-semibold text-lg">Watch Transformations</span>
+              <span className="font-semibold text-lg">
+                Watch Transformations
+              </span>
             </motion.button>
           </motion.div>
         </motion.div>
