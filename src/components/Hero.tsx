@@ -149,7 +149,7 @@ const Hero = () => {
               }}
               onClick={() =>
                 window.open(
-                  'https://calendly.com/championlifestyle-yash/30min?month=2025-07',
+                  'https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform',
                   '_blank'
                 )
               }
