@@ -33,6 +33,8 @@ const Header = () => {
             <a href="#about-coach" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
               About Coach
             </a>
+            <a href="#athlete" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+               
             </a>
             <a href="#reviews" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
               Reviews
