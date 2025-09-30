@@ -11,7 +11,7 @@ const CoachSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-black">
+    <section id="about-coach" className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           

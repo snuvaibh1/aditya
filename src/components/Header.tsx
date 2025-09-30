@@ -4,6 +4,22 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <header className="fixed top-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,23 +40,33 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+            <a
+              href="#home"
+              onClick={(e) => handleNavClick(e, 'home')}
+              className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+            >
               Home
             </a>
-            <a href="#programs" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+            <a
+              href="#programs"
+              onClick={(e) => handleNavClick(e, 'programs')}
+              className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+            >
               Programs
             </a>
-            <a href="#about-coach" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+            <a
+              href="#about-coach"
+              onClick={(e) => handleNavClick(e, 'about-coach')}
+              className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+            >
               About Coach
             </a>
-            <a href="#athlete" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
-              
-            </a>
-            <a href="#reviews" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+            <a
+              href="#reviews"
+              onClick={(e) => handleNavClick(e, 'reviews')}
+              className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+            >
               Reviews
-            </a>
-            <a href="#contact" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
-              Contact
             </a>
           </nav>
 
@@ -59,23 +85,33 @@ const Header = () => {
             className="md:hidden py-4 bg-black/70 backdrop-blur-lg border-t border-yellow-500/20 shadow-md shadow-yellow-500/10 rounded-b-2xl"
           >
             <nav className="flex flex-col space-y-4">
-              <a href="#home" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+              <a
+                href="#home"
+                onClick={(e) => handleNavClick(e, 'home')}
+                className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+              >
                 Home
               </a>
-              <a href="#programs" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+              <a
+                href="#programs"
+                onClick={(e) => handleNavClick(e, 'programs')}
+                className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+              >
                 Programs
               </a>
-              <a href="#about-coach" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+              <a
+                href="#about-coach"
+                onClick={(e) => handleNavClick(e, 'about-coach')}
+                className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+              >
                 About Coach
               </a>
-              <a href="#athlete" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
-                Courses
-              </a>
-              <a href="#reviews" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+              <a
+                href="#reviews"
+                onClick={(e) => handleNavClick(e, 'reviews')}
+                className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+              >
                 Reviews
-              </a>
-              <a href="#contact" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
-                Contact
               </a>
             </nav>
           </div>

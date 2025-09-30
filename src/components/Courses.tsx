@@ -61,7 +61,7 @@ const Courses = () => {
     "https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform";
 
   return (
-    <section id="courses" className="py-20 px-4">
+    <section id="programs" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
