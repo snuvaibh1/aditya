@@ -84,7 +84,7 @@ const CoachSection: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() =>
-                window.open('https://calendly.com/championlifestyle-yash/30min?month=2025-07', '_blank')
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform?usp=dialog', '_blank')
               }
             >
               Work With Me
