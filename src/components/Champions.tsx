@@ -68,7 +68,7 @@ const Champions = () => {
     {
       id: 5,
       type: "image",
-      src: "https://i.imgur.com/CrWE1AW.jpeg",
+      src: "https://ik.imagekit.io/slfql4jkj/CrWE1AW_d.webp?updatedAt=1759380103992",
       alt: "Palakh Sabarwal - Fitness Enthusiast",
       review: {
         text: "Aditya has completely transformed the way I look at fitness. He created a plan that was tailored to my fitness goals, they were challenging but yet comfortable. The best part is that working out with him is like working out with a friend. He is patient, attentive, encouraging and will ensure you push beyond what you think you are capable of. I highly recommend him! 🙌🏻",
