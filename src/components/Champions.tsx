@@ -26,7 +26,7 @@ const Champions = () => {
         },
         {
           type: "image",
-          src: "https://i.imgur.com/bfyagHf.jpeg",
+          src: "https://ik.imagekit.io/slfql4jkj/bfyagHf_d.webp?updatedAt=1759379963314",
           alt: "Trisha Darveshi - Badminton Image 2",
         },
         {
