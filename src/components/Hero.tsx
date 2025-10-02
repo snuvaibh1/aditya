@@ -190,7 +190,7 @@ const Hero = () => {
                 />
               </div>
               <span className="font-semibold text-lg">
-                Watch Transformations
+                Watch Intro
               </span>
             </motion.button>
           </motion.div>
