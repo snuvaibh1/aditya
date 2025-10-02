@@ -11,7 +11,7 @@ const Champions = () => {
       alt: "Champion transformation 1",
       review: {
         text: "Coach Aditya transformed the way I train for racing. My control, reflexes, and my performance at this sport have improved drastically!",
-        name: "Gunjan Tiwari",
+        name: "Vianna Shah",
         role: "Formula Car Driver",
       },
     },
