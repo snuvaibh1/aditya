@@ -24,7 +24,7 @@ const CoachSection: React.FC = () => {
           >
             <div className="relative w-80 h-96 rounded-3xl overflow-hidden border-4 border-yellow-500/30 shadow-2xl shadow-yellow-500/20">
               <img
-                src="https://i.imgur.com/Gbs73eG.jpeg"
+                src="https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-09-01%20at%2019.29.08_1b5e6228.jpg?updatedAt=1759379667960"
                 alt="Coach Aditya"
                 className="w-full h-full object-cover"
                 loading="lazy"
