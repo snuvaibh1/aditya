@@ -164,7 +164,7 @@ const Hero = () => {
                 }}
               />
               <span className="relative z-10 flex items-center justify-center space-x-2">
-                <span>Begin Transformation</span>
+                <span>Watch intro</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </span>
             </motion.button>
