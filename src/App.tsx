@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Programs from './components/Programs';
 import Courses from './components/Courses';
+import Transformations from './components/Transformations';
 import Testimonials from './components/Testimonials';
 import AthletePage from './components/AthletePage';
 import Champions from './components/Champions';
@@ -20,6 +21,7 @@ function App() {
         <AthletePage />
         <Champions />
         <Courses />
+        <Transformations />
         <Testimonials />
         <Footer />
       </div>
