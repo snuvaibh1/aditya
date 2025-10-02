@@ -32,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
-              src="https://i.imgur.com/DH8hZaw.jpeg"
+              src="https://ik.imagekit.io/slfql4jkj/Gemini_Generated_Image_9g05rc9g05rc9g05%20(1)-modified.png?updatedAt=1759378954549"
               alt="AS Logo"
               className="w-12 h-12 object-contain rounded-full border border-yellow-500/40 shadow-md shadow-yellow-500/30"
             />
