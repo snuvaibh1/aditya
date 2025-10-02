@@ -57,7 +57,7 @@ const Champions = () => {
     {
       id: 4,
       type: "image",
-      src: "https://i.imgur.com/N6N2HUF.jpeg",
+      src: "https://ik.imagekit.io/slfql4jkj/N6N2HUF_d.webp?updatedAt=1759380046368",
       alt: "Neha Shetty - Fitness Enthusiast",
       review: {
         text: "Working with Aditya as my coach has been amazing! He’s helped me stay motivated, challenge myself and I’ve seen noticeable improvements in both my strength and fitness. I really enjoyed the variety and challenges he brought to every session. He always ensured my technique is correct to avoid any sort of injuries and he’s always set up and ready to go with a planned routine. I thoroughly enjoyed working out with him and truly appreciate all the encouragement and expertise he’s shared!",
