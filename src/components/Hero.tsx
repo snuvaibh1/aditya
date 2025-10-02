@@ -46,7 +46,7 @@ const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://ik.imagekit.io/slfql4jkj/Gemini_Generated_Image_9g05rc9g05rc9g05%20(1)-modified.png?updatedAt=1759378954549"
+          src="https://i.imgur.com/JNHqgCV.png"
           alt="Cinematic Background"
           className="w-full h-full object-cover"
           loading="eager"
