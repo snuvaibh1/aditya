@@ -7,7 +7,7 @@ const Champions = () => {
     {
       id: 1,
       type: "image",
-      src: "https://i.imgur.com/eSwFfDl.jpeg",
+      src: "https://ik.imagekit.io/slfql4jkj/eSwFfDl_d.webp?updatedAt=1759379784689",
       alt: "Champion transformation 1",
       review: {
         text: "Coach Aditya transformed the way I train for racing. My control, reflexes, and my performance at this sport have improved drastically!",
