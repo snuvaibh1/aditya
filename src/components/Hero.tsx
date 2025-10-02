@@ -70,7 +70,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
           >
             <motion.img
-              src="https://i.imgur.com/KM56eRw.png"
+              src="https://ik.imagekit.io/slfql4jkj/Gemini_Generated_Image_9g05rc9g05rc9g05%20(1)-modified.png?updatedAt=1759378954549"
               alt="Champions Lifestyle Logo"
               className="w-full h-full object-contain"
               onLoad={() => setLogoLoaded(true)}
