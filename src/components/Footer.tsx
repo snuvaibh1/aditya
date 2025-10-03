@@ -11,14 +11,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and About */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg shadow-yellow-500/30">
-                <span className="text-black font-bold text-xl">F</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-6">
+              {/* Replace with Image Logo */}
+              <img
+                src="https://ik.imagekit.io/slfql4jkj/Gemini_Generated_Image_9g05rc9g05rc9g05%20(1)-modified.png?updatedAt=1759378954549"
+                alt="Aditya Sandu Fitness Logo"
+                className="w-12 h-12 rounded-lg shadow-lg shadow-yellow-500/30 object-contain"
+              />
               <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                 Aditya Sandu Fitness
               </span>
             </div>
+
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               <span className="text-gray-100 font-medium">
                 Transform your life with our premium fitness programs. Join thousands of
