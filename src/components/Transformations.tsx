@@ -5,26 +5,46 @@ const Transformations = () => {
   const transformations = [
     {
       id: 1,
+      name: 'Rahul Sharma',
+      achievement: 'Lost 15kg in 3 months',
       before: 'https://images.pexels.com/photos/6740815/pexels-photo-6740815.jpeg',
       after: 'https://images.pexels.com/photos/6456037/pexels-photo-6456037.jpeg',
-      alt: 'Client transformation 1'
     },
     {
       id: 2,
+      name: 'Priya Patel',
+      achievement: 'Gained 8kg muscle mass',
       before: 'https://images.pexels.com/photos/6551415/pexels-photo-6551415.jpeg',
       after: 'https://images.pexels.com/photos/6551174/pexels-photo-6551174.jpeg',
-      alt: 'Client transformation 2'
     },
     {
       id: 3,
+      name: 'Amit Kumar',
+      achievement: 'Transformed body composition',
       before: 'https://images.pexels.com/photos/6551122/pexels-photo-6551122.jpeg',
       after: 'https://images.pexels.com/photos/6550856/pexels-photo-6550856.jpeg',
-      alt: 'Client transformation 3'
-    }
+    },
+    {
+      id: 4,
+      name: 'Sneha Reddy',
+      achievement: 'Lost 20kg in 4 months',
+      before: 'https://images.pexels.com/photos/6740815/pexels-photo-6740815.jpeg',
+      after: 'https://images.pexels.com/photos/6456037/pexels-photo-6456037.jpeg',
+    },
+    {
+      id: 5,
+      name: 'Vikram Singh',
+      achievement: 'Built 12kg lean muscle',
+      before: 'https://images.pexels.com/photos/6551415/pexels-photo-6551415.jpeg',
+      after: 'https://images.pexels.com/photos/6551174/pexels-photo-6551174.jpeg',
+    },
   ];
 
+  // Duplicate the array to create seamless loop
+  const duplicatedTransformations = [...transformations, ...transformations];
+
   return (
-    <section id="transformations" className="py-20 px-4 bg-black">
+    <section id="transformations" className="py-20 px-4 bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -45,61 +65,69 @@ const Transformations = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-12">
-          {transformations.map((transformation, index) => (
-            <motion.div
-              key={transformation.id}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              {/* Before Card */}
-              <motion.div
-                className="group relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-yellow-500/30 shadow-lg shadow-black/50"
-                whileHover={{ scale: 1.02, boxShadow: '0 20px 60px rgba(234, 179, 8, 0.3)' }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="absolute top-4 left-4 z-10">
-                  <div className="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-500/50">
-                    <span className="text-yellow-400 font-bold text-sm">BEFORE</span>
-                  </div>
-                </div>
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img
-                    src={transformation.before}
-                    alt={`${transformation.alt} - Before`}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-              </motion.div>
+        {/* Scrolling Container */}
+        <div className="relative w-full overflow-hidden">
+          {/* Gradient Overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-              {/* After Card */}
-              <motion.div
-                className="group relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-yellow-500/50 shadow-xl shadow-yellow-500/20"
-                whileHover={{ scale: 1.02, boxShadow: '0 20px 60px rgba(234, 179, 8, 0.4)' }}
-                transition={{ duration: 0.3 }}
+          {/* Animated Scroll Track */}
+          <div className="flex animate-scroll-left hover:pause-animation">
+            {duplicatedTransformations.map((transformation, index) => (
+              <div
+                key={`${transformation.id}-${index}`}
+                className="flex-shrink-0 w-[400px] mx-4"
               >
-                <div className="absolute top-4 left-4 z-10">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 px-4 py-2 rounded-full shadow-lg">
-                    <span className="text-black font-bold text-sm">AFTER</span>
+                <div className="bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-yellow-500/30 shadow-xl shadow-black/50 hover:border-yellow-500/60 hover:shadow-yellow-500/20 transition-all duration-300">
+                  {/* Before and After Images */}
+                  <div className="grid grid-cols-2 gap-0">
+                    {/* Before */}
+                    <div className="relative">
+                      <div className="absolute top-3 left-3 z-10">
+                        <div className="bg-black/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-yellow-500/50">
+                          <span className="text-yellow-400 font-bold text-xs">BEFORE</span>
+                        </div>
+                      </div>
+                      <div className="aspect-[3/4] overflow-hidden">
+                        <img
+                          src={transformation.before}
+                          alt={`${transformation.name} - Before`}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    {/* After */}
+                    <div className="relative">
+                      <div className="absolute top-3 left-3 z-10">
+                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 px-3 py-1.5 rounded-full shadow-lg">
+                          <span className="text-black font-bold text-xs">AFTER</span>
+                        </div>
+                      </div>
+                      <div className="aspect-[3/4] overflow-hidden">
+                        <img
+                          src={transformation.after}
+                          alt={`${transformation.name} - After`}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Info Section */}
+                  <div className="p-6 bg-gradient-to-b from-black/40 to-black/60 backdrop-blur-sm">
+                    <h3 className="text-xl font-bold text-white mb-2">{transformation.name}</h3>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full" />
+                      <p className="text-yellow-400 font-semibold text-sm">{transformation.achievement}</p>
+                    </div>
                   </div>
                 </div>
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img
-                    src={transformation.after}
-                    alt={`${transformation.alt} - After`}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-              </motion.div>
-            </motion.div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
@@ -125,6 +153,25 @@ const Transformations = () => {
           </motion.a>
         </motion.div>
       </div>
+
+      <style>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-scroll-left {
+          animation: scroll-left 30s linear infinite;
+        }
+
+        .pause-animation:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };
