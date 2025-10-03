@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="border-t border-yellow-500/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-200 mb-4 md:mb-0 font-medium">
-              © 2025 FitGold. All rights reserved.
+              © 2025 Aditya Sandu Fitness. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a
