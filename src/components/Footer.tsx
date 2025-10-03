@@ -16,7 +16,7 @@ const Footer = () => {
                 <span className="text-black font-bold text-xl">F</span>
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                FitGold
+                Aditya Sandu Fitness
               </span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
