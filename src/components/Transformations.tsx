@@ -5,28 +5,21 @@ const Transformations = () => {
   const transformations = [
     {
       id: 1,
-      name: 'Rahul Sharma',
-      achievement: 'Lost 15kg in 3 months',
       before: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759926810865',
       after: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759929069728',
     },
     {
       id: 2,
-      name: 'Priya Patel',
-      achievement: 'Gained 8kg muscle mass',
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307',
       after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357',
     },
     {
       id: 3,
-      name: 'Amit Kumar',
-      achievement: 'Transformed body composition',
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552',
       after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234',
     },
   ];
 
-  // Duplicate the array to create seamless loop
   const duplicatedTransformations = [...transformations, ...transformations];
 
   return (
@@ -41,14 +34,9 @@ const Transformations = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Real Transformations. Real Results.
+              Real Transformations
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            <span className="text-gray-100 font-medium">
-              See how our clients achieved their best selves with our programs.
-            </span>
-          </p>
         </motion.div>
 
         {/* Scrolling Container */}
@@ -77,7 +65,7 @@ const Transformations = () => {
                       <div className="aspect-[3/4] overflow-hidden">
                         <img
                           src={transformation.before}
-                          alt={`${transformation.name} - Before`}
+                          alt="Before"
                           loading="lazy"
                           className="w-full h-full object-cover"
                         />
@@ -94,20 +82,11 @@ const Transformations = () => {
                       <div className="aspect-[3/4] overflow-hidden">
                         <img
                           src={transformation.after}
-                          alt={`${transformation.name} - After`}
+                          alt="After"
                           loading="lazy"
                           className="w-full h-full object-cover"
                         />
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Info Section */}
-                  <div className="p-6 bg-gradient-to-b from-black/40 to-black/60 backdrop-blur-sm">
-                    <h3 className="text-xl font-bold text-white mb-2">{transformation.name}</h3>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full" />
-                      <p className="text-yellow-400 font-semibold text-sm">{transformation.achievement}</p>
                     </div>
                   </div>
                 </div>
@@ -115,29 +94,6 @@ const Transformations = () => {
             ))}
           </div>
         </div>
-
-        {/* CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-gray-200 mb-6 font-medium text-lg">
-            Ready to start your transformation journey?
-          </p>
-          <motion.a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-yellow-500/30 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Start Your Transformation
-          </motion.a>
-        </motion.div>
       </div>
 
       <style>{`
