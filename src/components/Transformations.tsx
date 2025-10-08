@@ -24,20 +24,6 @@ const Transformations = () => {
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552',
       after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234',
     },
-    {
-      id: 4,
-      name: 'Sneha Reddy',
-      achievement: 'Lost 20kg in 4 months',
-      before: 'https://images.pexels.com/photos/6740815/pexels-photo-6740815.jpeg',
-      after: 'https://images.pexels.com/photos/6456037/pexels-photo-6456037.jpeg',
-    },
-    {
-      id: 5,
-      name: 'Vikram Singh',
-      achievement: 'Built 12kg lean muscle',
-      before: 'https://images.pexels.com/photos/6551415/pexels-photo-6551415.jpeg',
-      after: 'https://images.pexels.com/photos/6551174/pexels-photo-6551174.jpeg',
-    },
   ];
 
   // Duplicate the array to create seamless loop
