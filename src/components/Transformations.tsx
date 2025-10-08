@@ -8,7 +8,7 @@ const Transformations = () => {
       name: 'Rahul Sharma',
       achievement: 'Lost 15kg in 3 months',
       before: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759926810865',
-      after: 'https://images.pexels.com/photos/6456037/pexels-photo-6456037.jpeg',
+      after: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759926810865',
     },
     {
       id: 2,
