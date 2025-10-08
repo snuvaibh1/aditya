@@ -22,7 +22,7 @@ const Transformations = () => {
       name: 'Amit Kumar',
       achievement: 'Transformed body composition',
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552',
-      after: 'https://images.pexels.com/photos/6550856/pexels-photo-6550856.jpeg',
+      after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234',
     },
     {
       id: 4,
