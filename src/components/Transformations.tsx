@@ -15,7 +15,7 @@ const Transformations = () => {
       name: 'Priya Patel',
       achievement: 'Gained 8kg muscle mass',
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307',
-      after: 'https://images.pexels.com/photos/6551174/pexels-photo-6551174.jpeg',
+      after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357',
     },
     {
       id: 3,
