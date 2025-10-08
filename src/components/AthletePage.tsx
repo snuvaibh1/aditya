@@ -51,9 +51,11 @@ const CoachSection: React.FC = () => {
             </h2>
 
             <p className="text-lg text-gray-200 leading-relaxed">
-              Aditya Sandu is a passionate athlete and coach, dedicated to transforming lives through fitness. 
-              With experience across multiple sports, bodybuilding, and personal training, he has guided 
-              hundreds of clients towards healthier, stronger lifestyles.
+              My Journey
+My story with fitness started long before I ever thought of coaching. As a kid, I was obsessed with running fast and jumping farther than anyone else, a passion that took me from school grounds to national tracks as a sprinter and long jumper, and eventually to representing India in international football (U17).
+But I’ve never been one to stay in a single lane. The thrill of testing my limits led me into powerlifting, where I became a 3-time national gold medalist and earned the title of “Strong Boy of India” at the Junior Powerlifting Nationals. I’ve pushed my endurance through the 21 km Satara Hill Marathon and the Ladakh High-Altitude Marathon, and even challenged my discipline in competitive bodybuilding.
+Every sport, every medal, and every failure taught me something deeper about the human body and mind, how strength is built not just in the gym, but in the moments when you refuse to give up.
+Today, my mission is to help others discover that same strength within themselves, whether you’re an athlete chasing medals or someone ready to transform your body and mindset. I know what it takes to perform, to push, to transform and I’m here to help you do the same.
             </p>
 
             {/* Certifications */}
