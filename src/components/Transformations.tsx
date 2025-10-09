@@ -5,22 +5,16 @@ const Transformations = () => {
   const transformations = [
     {
       id: 1,
-      name: 'Rahul Sharma',
-      achievement: 'Lost 15kg in 3 months',
       before: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759926810865',
       after: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759929069728',
     },
     {
       id: 2,
-      name: 'Priya Patel',
-      achievement: 'Gained 8kg muscle mass',
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307',
       after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357',
     },
     {
       id: 3,
-      name: 'Amit Kumar',
-      achievement: 'Transformed body composition',
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552',
       after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234',
     },
