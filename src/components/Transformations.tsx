@@ -24,20 +24,6 @@ const Transformations = () => {
       before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552',
       after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234',
     },
-    {
-      id: 4,
-      name: 'Sneha Reddy',
-      achievement: 'Lost 20kg in 4 months',
-      before: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759926810865',
-      after: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759929069728',
-    },
-    {
-      id: 5,
-      name: 'Vikram Singh',
-      achievement: 'Built 12kg lean muscle',
-      before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307',
-      after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357',
-    },
   ];
 
   const duplicatedTransformations = [...transformations, ...transformations];
