@@ -1,113 +1,155 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { Star } from "lucide-react";
+import React from "react";
+import { motion } from "framer-motion";
 
-const Champions = () => {
-  const controls = useAnimation();
-
-  const champions = [
+const Transformations = () => {
+  const transformations = [
     {
       id: 1,
-      src: "https://ik.imagekit.io/slfql4jkj/eSwFfDl_d.webp?updatedAt=1759379784689",
-      name: "Vianna Shah",
-      role: "Formula Car Driver",
-      text: "Coach Aditya transformed the way I train for racing. My control, reflexes, and performance improved drastically!",
+      before: "https://ik.imagekit.io/dsauihjso/image.png?updatedAt=1760183145405",
+      after: "https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759929069728",
     },
     {
       id: 2,
-      src: "https://ik.imagekit.io/slfql4jkj/CIQsSm8_d.webp?updatedAt=1759379875435",
-      name: "Trisha Darveshi",
-      role: "Badminton Player",
-      text: "Coach Aditya’s training elevated my stamina and agility — I feel faster, sharper, and more confident in every match.",
+      before:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307",
+      after:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357",
     },
     {
       id: 3,
-      src: "https://ik.imagekit.io/slfql4jkj/bfyagHf_d.webp?updatedAt=1759379963314",
-      name: "Vajrajeet Date",
-      role: "Powerlifter",
-      text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
+      before:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552",
+      after:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234",
     },
     {
       id: 4,
-      src: "https://ik.imagekit.io/slfql4jkj/N6N2HUF_d.webp?updatedAt=1759380046368",
-      name: "Neha Shetty",
-      role: "Fitness Enthusiast",
-      text: "Working with Aditya as my coach has been amazing! I’ve seen noticeable improvements in both my strength and fitness.",
+      before:
+        "https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_90b45950.jpg?updatedAt=1760161843187",
+      after:
+        "https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_cd09e1d8.jpg?updatedAt=1760161887946",
     },
   ];
 
-  const loopedChampions = [...champions, ...champions]; // doubled for smooth loop
-
-  useEffect(() => {
-    const loopAnimation = async () => {
-      while (true) {
-        await controls.start({
-          x: ["0%", "-50%"],
-          transition: {
-            duration: 40, // speed of loop — lower = faster
-            ease: "linear",
-          },
-        });
-        await controls.set({ x: 0 });
-      }
-    };
-    loopAnimation();
-  }, [controls]);
+  const repeatedList = [...transformations, ...transformations, ...transformations]; // triple for smooth loop
 
   return (
-    <section className="py-16 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-          Our Champions
-        </h2>
-        <p className="text-gray-300 mt-3 text-sm sm:text-base">
-          See how our clients achieved their best selves with our programs.
-        </p>
-      </div>
-
-      <div className="relative w-full overflow-hidden">
+    <section
+      id="transformations"
+      className="py-16 px-3 md:py-20 md:px-4 bg-black overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
-          className="flex gap-6 will-change-transform"
-          animate={controls}
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "translateZ(0)",
-          }}
+          className="text-center mb-10 md:mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          {loopedChampions.map((champ, i) => (
-            <div
-              key={i}
-              className="min-w-[80%] sm:min-w-[45%] md:min-w-[30%] bg-black/60 border border-yellow-500/20 rounded-3xl overflow-hidden p-4 shadow-md shadow-black/40"
-            >
-              <img
-                src={champ.src}
-                alt={champ.name}
-                className="w-full h-56 object-cover rounded-2xl mb-4 block"
-                loading="lazy"
-              />
-              <p className="text-gray-300 italic mb-3 text-sm sm:text-base">
-                "{champ.text}"
-              </p>
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-400" />
-                <span className="font-semibold">{champ.name}</span>
-                <span className="text-gray-400 text-xs sm:text-sm">
-                  • {champ.role}
-                </span>
-              </div>
-            </div>
-          ))}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              Real Transformations. Real Results.
+            </span>
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <span className="text-gray-100 font-medium">
+              See how our clients achieved their best selves with our programs.
+            </span>
+          </p>
         </motion.div>
-      </div>
 
-      <div className="text-center mt-10">
-        <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform duration-200">
-          Start Your Transformation
-        </button>
+        {/* Scrolling Section */}
+        <div className="relative w-full overflow-hidden">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+
+          {/* Infinite Scroll */}
+          <motion.div
+            className="flex will-change-transform"
+            animate={{ x: ["0%", "-33.33%"] }} // only scroll one-third because list is tripled
+            transition={{
+              x: { repeat: Infinity, duration: 25, ease: "linear" },
+            }}
+          >
+            {repeatedList.map((t, i) => (
+              <div
+                key={`${t.id}-${i}`}
+                className="flex-shrink-0 w-[200px] sm:w-[260px] md:w-[380px] mx-1.5 sm:mx-3 md:mx-4"
+              >
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl md:rounded-3xl overflow-hidden border border-yellow-500/30 shadow-xl shadow-black/50 hover:border-yellow-500/60 hover:shadow-yellow-500/20 transition-all duration-300">
+                  {/* Before/After Images */}
+                  <div className="grid grid-cols-2">
+                    {/* Before */}
+                    <div className="relative">
+                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 z-10">
+                        <div className="bg-black/80 backdrop-blur-sm px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full border border-yellow-500/50">
+                          <span className="text-yellow-400 font-bold text-[8px] sm:text-[10px] md:text-xs">
+                            BEFORE
+                          </span>
+                        </div>
+                      </div>
+                      <div className="aspect-[3/4] overflow-hidden">
+                        <img
+                          src={t.before}
+                          alt="Before"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+
+                    {/* After */}
+                    <div className="relative">
+                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 z-10">
+                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full shadow-lg">
+                          <span className="text-black font-bold text-[8px] sm:text-[10px] md:text-xs">
+                            AFTER
+                          </span>
+                        </div>
+                      </div>
+                      <div className="aspect-[3/4] overflow-hidden">
+                        <img
+                          src={t.after}
+                          alt="After"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* CTA */}
+        <motion.div
+          className="text-center mt-12 md:mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-gray-200 mb-4 md:mb-6 font-medium text-base md:text-lg">
+            Ready to start your transformation journey?
+          </p>
+          <motion.a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:shadow-2xl hover:shadow-yellow-500/30 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Start Your Transformation
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default Champions;
+export default Transformations;
