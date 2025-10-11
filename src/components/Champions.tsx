@@ -32,7 +32,7 @@ const Champions = () => {
         {
           type: "video",
           embedCode:
-            '<iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-3xl" title="Trisha Darveshi Badminton Video"></iframe>',
+            '<iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-2xl" title="Trisha Darveshi Badminton Video"></iframe>',
         },
       ],
       review: {
@@ -45,7 +45,7 @@ const Champions = () => {
       id: 3,
       type: "video",
       embedCode:
-        '<iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-3xl" title="Champion transformation video 2"></iframe>',
+        '<iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-2xl" title="Champion transformation video 2"></iframe>',
       alt: "Champion transformation video 2",
       review: {
         text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
@@ -101,37 +101,43 @@ const Champions = () => {
               viewport={{ once: true }}
             >
               {/* Media */}
-              <div className="flex-1 rounded-3xl overflow-hidden shadow-lg shadow-black/50 border border-yellow-500/30 space-y-4">
+              <div className="flex-1 rounded-3xl overflow-hidden shadow-lg shadow-black/50 border border-yellow-500/30 p-2 bg-black/40">
                 {champion.type === "group" ? (
                   <div className="space-y-4">
                     {champion.media.map((item, idx) =>
                       item.type === "image" ? (
-                        <img
+                        <div
                           key={idx}
-                          src={item.src}
-                          alt={item.alt}
-                          loading="lazy"
-                          className="w-full h-auto object-cover rounded-3xl"
-                        />
+                          className="rounded-2xl overflow-hidden max-h-[450px]"
+                        >
+                          <img
+                            src={item.src}
+                            alt={item.alt}
+                            loading="lazy"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                       ) : (
                         <div
                           key={idx}
-                          className="w-full aspect-video h-[300px] rounded-3xl overflow-hidden"
+                          className="w-full aspect-video max-h-[450px] rounded-2xl overflow-hidden"
                           dangerouslySetInnerHTML={{ __html: item.embedCode }}
                         />
                       )
                     )}
                   </div>
                 ) : champion.type === "image" ? (
-                  <img
-                    src={champion.src}
-                    alt={champion.alt}
-                    loading="lazy"
-                    className="w-full h-auto object-cover rounded-3xl"
-                  />
+                  <div className="rounded-2xl overflow-hidden max-h-[450px]">
+                    <img
+                      src={champion.src}
+                      alt={champion.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 ) : (
                   <div
-                    className="w-full aspect-video h-[300px] rounded-3xl overflow-hidden"
+                    className="w-full aspect-video max-h-[450px] rounded-2xl overflow-hidden"
                     dangerouslySetInnerHTML={{ __html: champion.embedCode }}
                   />
                 )}
