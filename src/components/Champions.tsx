@@ -32,7 +32,7 @@ const Champions = () => {
         {
           type: "video",
           embedCode:
-            '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Trisha Darveshi Badminton Video"></iframe></div>',
+            '<div style="position:relative;width:100%;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;object-fit:cover;" title="Trisha Darveshi Badminton Video"></iframe></div>',
           alt: "Trisha Darveshi - Badminton Video",
         },
       ],
@@ -46,7 +46,7 @@ const Champions = () => {
       id: 3,
       type: "video",
       embedCode:
-        '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Champion transformation video 2"></iframe></div>',
+        '<div style="position:relative;width:100%;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;object-fit:cover;" title="Champion transformation video 2"></iframe></div>',
       alt: "Champion transformation video 2",
       review: {
         text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
@@ -63,7 +63,6 @@ const Champions = () => {
         text: "Working with Aditya as my coach has been amazing! He’s helped me stay motivated, challenge myself and I’ve seen noticeable improvements in both my strength and fitness. I really enjoyed the variety and challenges he brought to every session. He always ensured my technique is correct to avoid any sort of injuries and he’s always set up and ready to go with a planned routine. I thoroughly enjoyed working out with him and truly appreciate all the encouragement and expertise he’s shared!",
         name: "Neha Shetty",
         role: "Fitness Enthusiast",
-
       },
     },
   ];
@@ -113,12 +112,12 @@ const Champions = () => {
                           src={item.src}
                           alt={item.alt}
                           loading="lazy"
-                          className="w-full h-full object-cover rounded-3xl"
+                          className="w-full h-auto object-cover rounded-3xl"
                         />
                       ) : (
                         <div
                           key={idx}
-                          className="w-full h-full relative rounded-3xl overflow-hidden"
+                          className="w-full aspect-video rounded-3xl overflow-hidden"
                           dangerouslySetInnerHTML={{ __html: item.embedCode }}
                         />
                       )
@@ -129,11 +128,11 @@ const Champions = () => {
                     src={champion.src}
                     alt={champion.alt}
                     loading="lazy"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-cover rounded-3xl"
                   />
                 ) : (
                   <div
-                    className="w-full h-full relative"
+                    className="w-full aspect-video rounded-3xl overflow-hidden"
                     dangerouslySetInnerHTML={{ __html: champion.embedCode }}
                   />
                 )}
