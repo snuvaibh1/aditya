@@ -31,6 +31,7 @@ const Transformations = () => {
     },
   ];
 
+  // Duplicate content twice for smooth infinite scroll
   const repeated = [...transformations, ...transformations];
 
   return (
@@ -56,24 +57,24 @@ const Transformations = () => {
           </p>
         </motion.div>
 
-        {/* Infinite Scroll */}
+        {/* Seamless Infinite Scroll */}
         <div className="relative w-full overflow-hidden">
           {/* fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-          <div className="slider-track flex animate-scroll">
+          <div className="flex whitespace-nowrap animate-marquee will-change-transform">
             {repeated.map((t, i) => (
               <div
                 key={`${t.id}-${i}`}
-                className="flex-shrink-0 w-[200px] sm:w-[260px] md:w-[380px] mx-1.5 sm:mx-3 md:mx-4"
+                className="inline-block w-[200px] sm:w-[260px] md:w-[380px] mx-2"
               >
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl md:rounded-3xl overflow-hidden border border-yellow-500/30 shadow-xl shadow-black/50 hover:border-yellow-500/60 hover:shadow-yellow-500/20 transition-all duration-300">
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl md:rounded-3xl overflow-hidden border border-yellow-500/30 shadow-xl hover:border-yellow-500/60 transition-all duration-300">
                   <div className="grid grid-cols-2">
                     {/* Before */}
                     <div className="relative">
-                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 z-10">
-                        <div className="bg-black/80 px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full border border-yellow-500/50">
+                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 z-10">
+                        <div className="bg-black/80 px-2 py-[2px] rounded-full border border-yellow-500/50">
                           <span className="text-yellow-400 font-bold text-[8px] sm:text-[10px] md:text-xs">
                             BEFORE
                           </span>
@@ -86,8 +87,8 @@ const Transformations = () => {
 
                     {/* After */}
                     <div className="relative">
-                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 z-10">
-                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full shadow-lg">
+                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 z-10">
+                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 px-2 py-[2px] rounded-full">
                           <span className="text-black font-bold text-[8px] sm:text-[10px] md:text-xs">
                             AFTER
                           </span>
@@ -128,9 +129,9 @@ const Transformations = () => {
         </motion.div>
       </div>
 
-      {/* keyframes */}
+      {/* Keyframes for Seamless Infinite Scroll */}
       <style jsx>{`
-        @keyframes scroll {
+        @keyframes marquee {
           0% {
             transform: translateX(0);
           }
@@ -138,8 +139,12 @@ const Transformations = () => {
             transform: translateX(-50%);
           }
         }
-        .animate-scroll {
-          animation: scroll 25s linear infinite;
+        .animate-marquee {
+          display: inline-flex;
+          animation: marquee 35s linear infinite;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>
