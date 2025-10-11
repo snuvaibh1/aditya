@@ -31,13 +31,10 @@ const Transformations = () => {
     },
   ];
 
-  const repeatedList = [...transformations, ...transformations, ...transformations]; // triple for smooth loop
+  const repeated = [...transformations, ...transformations];
 
   return (
-    <section
-      id="transformations"
-      className="py-16 px-3 md:py-20 md:px-4 bg-black overflow-hidden"
-    >
+    <section id="transformations" className="py-16 px-3 md:py-20 md:px-4 bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -59,44 +56,31 @@ const Transformations = () => {
           </p>
         </motion.div>
 
-        {/* Scrolling Section */}
+        {/* Infinite Scroll */}
         <div className="relative w-full overflow-hidden">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+          {/* fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent z-10" />
 
-          {/* Infinite Scroll */}
-          <motion.div
-            className="flex will-change-transform"
-            animate={{ x: ["0%", "-33.33%"] }} // only scroll one-third because list is tripled
-            transition={{
-              x: { repeat: Infinity, duration: 25, ease: "linear" },
-            }}
-          >
-            {repeatedList.map((t, i) => (
+          <div className="slider-track flex animate-scroll">
+            {repeated.map((t, i) => (
               <div
                 key={`${t.id}-${i}`}
                 className="flex-shrink-0 w-[200px] sm:w-[260px] md:w-[380px] mx-1.5 sm:mx-3 md:mx-4"
               >
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl md:rounded-3xl overflow-hidden border border-yellow-500/30 shadow-xl shadow-black/50 hover:border-yellow-500/60 hover:shadow-yellow-500/20 transition-all duration-300">
-                  {/* Before/After Images */}
                   <div className="grid grid-cols-2">
                     {/* Before */}
                     <div className="relative">
                       <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 z-10">
-                        <div className="bg-black/80 backdrop-blur-sm px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full border border-yellow-500/50">
+                        <div className="bg-black/80 px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full border border-yellow-500/50">
                           <span className="text-yellow-400 font-bold text-[8px] sm:text-[10px] md:text-xs">
                             BEFORE
                           </span>
                         </div>
                       </div>
                       <div className="aspect-[3/4] overflow-hidden">
-                        <img
-                          src={t.before}
-                          alt="Before"
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                        />
+                        <img src={t.before} alt="Before" className="w-full h-full object-cover" />
                       </div>
                     </div>
 
@@ -110,19 +94,14 @@ const Transformations = () => {
                         </div>
                       </div>
                       <div className="aspect-[3/4] overflow-hidden">
-                        <img
-                          src={t.after}
-                          alt="After"
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                        />
+                        <img src={t.after} alt="After" className="w-full h-full object-cover" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* CTA */}
@@ -148,6 +127,21 @@ const Transformations = () => {
           </motion.a>
         </motion.div>
       </div>
+
+      {/* keyframes */}
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-scroll {
+          animation: scroll 25s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
