@@ -50,7 +50,7 @@ const Champions = () => {
       alt: "Champion transformation video 2",
       review: {
         text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
-        name: "Vajrajeetingh",
+        name: "Vajrajeet Date",
         role: "Powerlifter",
       },
     },
