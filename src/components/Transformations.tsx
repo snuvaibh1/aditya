@@ -1,27 +1,33 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Transformations = () => {
   const transformations = [
     {
       id: 1,
-      before: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759926810865',
-      after: 'https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759929069728',
+      before: "https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759926810865",
+      after: "https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759929069728",
     },
     {
       id: 2,
-      before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307',
-      after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357',
+      before:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307",
+      after:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357",
     },
     {
       id: 3,
-      before: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552',
-      after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234',
+      before:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552",
+      after:
+        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234",
     },
     {
       id: 4,
-      before: 'https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_90b45950.jpg?updatedAt=1760161843187',
-      after: 'https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_cd09e1d8.jpg?updatedAt=1760161887946',
+      before:
+        "https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_90b45950.jpg?updatedAt=1760161843187",
+      after:
+        "https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_cd09e1d8.jpg?updatedAt=1760161887946",
     },
   ];
 
@@ -30,6 +36,7 @@ const Transformations = () => {
   return (
     <section id="transformations" className="py-20 px-4 bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -55,8 +62,14 @@ const Transformations = () => {
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-          {/* Animated Scroll Track */}
-          <div className="flex animate-scroll-left hover:pause-animation">
+          {/* Smooth GPU scroll animation */}
+          <motion.div
+            className="flex will-change-transform"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              x: { repeat: Infinity, duration: 30, ease: "linear" },
+            }}
+          >
             {duplicatedTransformations.map((transformation, index) => (
               <div
                 key={`${transformation.id}-${index}`}
@@ -69,7 +82,9 @@ const Transformations = () => {
                     <div className="relative">
                       <div className="absolute top-2 left-2 md:top-3 md:left-3 z-10">
                         <div className="bg-black/80 backdrop-blur-sm px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-yellow-500/50">
-                          <span className="text-yellow-400 font-bold text-[10px] md:text-xs">BEFORE</span>
+                          <span className="text-yellow-400 font-bold text-[10px] md:text-xs">
+                            BEFORE
+                          </span>
                         </div>
                       </div>
                       <div className="aspect-[3/4] overflow-hidden">
@@ -86,7 +101,9 @@ const Transformations = () => {
                     <div className="relative">
                       <div className="absolute top-2 left-2 md:top-3 md:left-3 z-10">
                         <div className="bg-gradient-to-r from-yellow-400 to-orange-500 px-2 py-1 md:px-3 md:py-1.5 rounded-full shadow-lg">
-                          <span className="text-black font-bold text-[10px] md:text-xs">AFTER</span>
+                          <span className="text-black font-bold text-[10px] md:text-xs">
+                            AFTER
+                          </span>
                         </div>
                       </div>
                       <div className="aspect-[3/4] overflow-hidden">
@@ -102,16 +119,20 @@ const Transformations = () => {
 
                   {/* Info Section */}
                   <div className="p-3 md:p-6 bg-gradient-to-b from-black/40 to-black/60 backdrop-blur-sm">
-                    <h3 className="text-base md:text-xl font-bold text-white mb-1 md:mb-2">{transformation.name}</h3>
+                    <h3 className="text-base md:text-xl font-bold text-white mb-1 md:mb-2">
+                      {transformation.name}
+                    </h3>
                     <div className="flex items-center gap-1.5 md:gap-2">
                       <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex-shrink-0" />
-                      <p className="text-yellow-400 font-semibold text-xs md:text-sm">{transformation.achievement}</p>
+                      <p className="text-yellow-400 font-semibold text-xs md:text-sm">
+                        {transformation.achievement}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* CTA */}
@@ -137,25 +158,6 @@ const Transformations = () => {
           </motion.a>
         </motion.div>
       </div>
-
-      <style>{`
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-scroll-left {
-          animation: scroll-left 30s linear infinite;
-        }
-
-        .pause-animation:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };
