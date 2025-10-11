@@ -21,7 +21,7 @@ const Transformations = () => {
     {
       id: 4,
       before: 'https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_90b45950.jpg?updatedAt=1760161843187',
-      after: 'https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234',
+      after: 'https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_cd09e1d8.jpg?updatedAt=1760161887946',
     },
   ];
 
