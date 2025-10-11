@@ -32,8 +32,7 @@ const Champions = () => {
         {
           type: "video",
           embedCode:
-            '<div style="position:relative;width:100%;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;object-fit:cover;" title="Trisha Darveshi Badminton Video"></iframe></div>',
-          alt: "Trisha Darveshi - Badminton Video",
+            '<iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-3xl" title="Trisha Darveshi Badminton Video"></iframe>',
         },
       ],
       review: {
@@ -46,7 +45,7 @@ const Champions = () => {
       id: 3,
       type: "video",
       embedCode:
-        '<div style="position:relative;width:100%;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;object-fit:cover;" title="Champion transformation video 2"></iframe></div>',
+        '<iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-3xl" title="Champion transformation video 2"></iframe>',
       alt: "Champion transformation video 2",
       review: {
         text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
@@ -117,7 +116,7 @@ const Champions = () => {
                       ) : (
                         <div
                           key={idx}
-                          className="w-full aspect-video rounded-3xl overflow-hidden"
+                          className="w-full aspect-video h-[300px] rounded-3xl overflow-hidden"
                           dangerouslySetInnerHTML={{ __html: item.embedCode }}
                         />
                       )
@@ -132,7 +131,7 @@ const Champions = () => {
                   />
                 ) : (
                   <div
-                    className="w-full aspect-video rounded-3xl overflow-hidden"
+                    className="w-full aspect-video h-[300px] rounded-3xl overflow-hidden"
                     dangerouslySetInnerHTML={{ __html: champion.embedCode }}
                   />
                 )}
