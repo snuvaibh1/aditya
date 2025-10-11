@@ -1,166 +1,186 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Star } from "lucide-react";
 
-const Transformations = () => {
-  const transformations = [
+const Champions = () => {
+  const champions = [
     {
       id: 1,
-      before: "https://ik.imagekit.io/dsauihjso/image.png?updatedAt=1760183145405",
-      after: "https://ik.imagekit.io/slfql4jkj/image.png?updatedAt=1759929069728",
+      type: "image",
+      src: "https://ik.imagekit.io/slfql4jkj/eSwFfDl_d.webp?updatedAt=1759379784689",
+      alt: "Champion transformation 1",
+      review: {
+        text: "Coach Aditya transformed the way I train for racing. My control, reflexes, and my performance at this sport have improved drastically!",
+        name: "Vianna Shah",
+        role: "Formula Car Driver",
+      },
     },
     {
       id: 2,
-      before:
-        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.16_336a1c8c.jpg?updatedAt=1759928815307",
-      after:
-        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.22_8c6d808d.jpg?updatedAt=1759928869357",
+      type: "group",
+      media: [
+        {
+          type: "image",
+          src: "https://ik.imagekit.io/slfql4jkj/CIQsSm8_d.webp?updatedAt=1759379875435",
+          alt: "Trisha Darveshi - Badminton Image 1",
+        },
+        {
+          type: "image",
+          src: "https://ik.imagekit.io/slfql4jkj/bfyagHf_d.webp?updatedAt=1759379963314",
+          alt: "Trisha Darveshi - Badminton Image 2",
+        },
+        {
+          type: "video",
+          embedCode:
+            '<iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-2xl" title="Trisha Darveshi Badminton Video"></iframe>',
+        },
+      ],
+      review: {
+        text: "Coach Aditya’s training completely elevated my stamina and agility on the badminton court — I feel faster, sharper, and more confident in every match.",
+        name: "Trisha Darveshi",
+        role: "Badminton Player",
+      },
     },
     {
       id: 3,
-      before:
-        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.04.44_853f0aeb.jpg?updatedAt=1759928901552",
-      after:
-        "https://ik.imagekit.io/slfql4jkj/WhatsApp%20Image%202025-10-08%20at%2018.05.41_c3f56ca0.jpg?updatedAt=1759928932234",
+      type: "video",
+      embedCode:
+        '<iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-2xl" title="Champion transformation video 2"></iframe>',
+      alt: "Champion transformation video 2",
+      review: {
+        text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
+        name: "Vajrajeet Date",
+        role: "Powerlifter",
+      },
     },
     {
       id: 4,
-      before:
-        "https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_90b45950.jpg?updatedAt=1760161843187",
-      after:
-        "https://ik.imagekit.io/h7eyqsxl7/WhatsApp%20Image%202025-10-10%20at%2000.01.52_cd09e1d8.jpg?updatedAt=1760161887946",
+      type: "image",
+      src: "https://ik.imagekit.io/slfql4jkj/N6N2HUF_d.webp?updatedAt=1759380046368",
+      alt: "Neha Shetty - Fitness Enthusiast",
+      review: {
+        text: "Working with Aditya as my coach has been amazing! He’s helped me stay motivated, challenge myself and I’ve seen noticeable improvements in both my strength and fitness.",
+        name: "Neha Shetty",
+        role: "Fitness Enthusiast",
+      },
     },
   ];
 
-  const duplicatedTransformations = [...transformations, ...transformations];
-
   return (
-    <section id="transformations" className="py-16 px-3 md:py-20 md:px-4 bg-black overflow-hidden">
+    <section
+      id="reviews"
+      className="py-20 px-4 bg-gradient-to-b from-black via-gray-950 to-black"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-10 md:mb-16"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Real Transformations. Real Results.
+              Our Champions
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            <span className="text-gray-100 font-medium">
-              See how our clients achieved their best selves with our programs.
-            </span>
-          </p>
         </motion.div>
 
-        {/* Scrolling Container */}
-        <div className="relative w-full overflow-hidden">
-          {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
-
-          {/* Smooth GPU scroll animation */}
-          <motion.div
-            className="flex will-change-transform"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              x: { repeat: Infinity, duration: 18, ease: "linear" }, // faster scroll (was 30)
-            }}
-            whileHover={{ animationPlayState: "paused" }}
-          >
-            {duplicatedTransformations.map((transformation, index) => (
-              <div
-                key={`${transformation.id}-${index}`}
-                className="flex-shrink-0 w-[200px] sm:w-[260px] md:w-[380px] mx-1.5 sm:mx-3 md:mx-4"
-              >
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl md:rounded-3xl overflow-hidden border border-yellow-500/30 shadow-xl shadow-black/50 hover:border-yellow-500/60 hover:shadow-yellow-500/20 transition-all duration-300">
-                  {/* Before and After Images */}
-                  <div className="grid grid-cols-2 gap-0">
-                    {/* Before */}
-                    <div className="relative">
-                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 z-10">
-                        <div className="bg-black/80 backdrop-blur-sm px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full border border-yellow-500/50">
-                          <span className="text-yellow-400 font-bold text-[8px] sm:text-[10px] md:text-xs">
-                            BEFORE
-                          </span>
+        {/* Champions Rows */}
+        <div className="space-y-16">
+          {champions.map((champion, index) => (
+            <motion.div
+              key={champion.id}
+              className={`flex flex-col md:flex-row items-center gap-8 ${
+                index % 2 === 1 ? "md:flex-row-reverse" : ""
+              }`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              style={{
+                willChange: "transform, opacity",
+                backfaceVisibility: "hidden",
+                transform: "translateZ(0)",
+                WebkitTransform: "translateZ(0)",
+                WebkitBackfaceVisibility: "hidden",
+              }}
+            >
+              {/* Media */}
+              <div className="flex-1 rounded-3xl overflow-hidden shadow-lg shadow-black/50 border border-yellow-500/30 p-2 bg-black/40">
+                {champion.type === "group" ? (
+                  <div className="space-y-4">
+                    {champion.media.map((item, idx) =>
+                      item.type === "image" ? (
+                        <div
+                          key={idx}
+                          className="rounded-2xl overflow-hidden max-h-[450px]"
+                          style={{
+                            willChange: "transform",
+                            backfaceVisibility: "hidden",
+                            transform: "translateZ(0)",
+                          }}
+                        >
+                          <img
+                            src={item.src}
+                            alt={item.alt}
+                            loading="lazy"
+                            className="w-full h-full object-cover block"
+                          />
                         </div>
-                      </div>
-                      <div className="aspect-[3/4] overflow-hidden">
-                        <img
-                          src={transformation.before}
-                          alt="Before"
-                          loading="lazy"
-                          className="w-full h-full object-cover"
+                      ) : (
+                        <div
+                          key={idx}
+                          className="w-full aspect-video max-h-[450px] rounded-2xl overflow-hidden"
+                          dangerouslySetInnerHTML={{ __html: item.embedCode }}
                         />
-                      </div>
-                    </div>
-
-                    {/* After */}
-                    <div className="relative">
-                      <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 z-10">
-                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 px-1.5 py-[2px] sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full shadow-lg">
-                          <span className="text-black font-bold text-[8px] sm:text-[10px] md:text-xs">
-                            AFTER
-                          </span>
-                        </div>
-                      </div>
-                      <div className="aspect-[3/4] overflow-hidden">
-                        <img
-                          src={transformation.after}
-                          alt="After"
-                          loading="lazy"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
+                      )
+                    )}
                   </div>
-
-                  {/* Info Section */}
-                  <div className="p-2 sm:p-3 md:p-6 bg-gradient-to-b from-black/40 to-black/60 backdrop-blur-sm">
-                    <h3 className="text-sm sm:text-base md:text-xl font-bold text-white mb-1 md:mb-2">
-                      {transformation.name}
-                    </h3>
-                    <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2">
-                      <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex-shrink-0" />
-                      <p className="text-yellow-400 font-semibold text-[10px] sm:text-xs md:text-sm">
-                        {transformation.achievement}
-                      </p>
-                    </div>
+                ) : champion.type === "image" ? (
+                  <div
+                    className="rounded-2xl overflow-hidden max-h-[450px]"
+                    style={{
+                      willChange: "transform",
+                      backfaceVisibility: "hidden",
+                      transform: "translateZ(0)",
+                    }}
+                  >
+                    <img
+                      src={champion.src}
+                      alt={champion.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover block"
+                    />
                   </div>
+                ) : (
+                  <div
+                    className="w-full aspect-video max-h-[450px] rounded-2xl overflow-hidden"
+                    dangerouslySetInnerHTML={{ __html: champion.embedCode }}
+                  />
+                )}
+              </div>
+
+              {/* Review */}
+              <div className="flex-1 text-white">
+                <p className="text-lg md:text-xl italic mb-4 text-gray-300">
+                  "{champion.review.text}"
+                </p>
+                <div className="flex items-center gap-2">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="font-semibold">{champion.review.name}</span>
+                  <span className="text-gray-400 text-sm">
+                    • {champion.review.role}
+                  </span>
                 </div>
               </div>
-            ))}
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
-
-        {/* CTA */}
-        <motion.div
-          className="text-center mt-12 md:mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-gray-200 mb-4 md:mb-6 font-medium text-base md:text-lg">
-            Ready to start your transformation journey?
-          </p>
-          <motion.a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScgGR33N0hRNP3ewlKgMgBLYwhUvoPx6XWr12w8QHeZkaadAA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:shadow-2xl hover:shadow-yellow-500/30 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Start Your Transformation
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );
 };
 
-export default Transformations;
+export default Champions;
