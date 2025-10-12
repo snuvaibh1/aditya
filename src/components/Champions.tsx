@@ -64,6 +64,18 @@ const Champions = () => {
         role: "Fitness Enthusiast",
       },
     },
+    {
+      id: 5,
+      type: "video",
+      embedCode:
+        '<div style="padding-bottom: 56.25%; position: relative;"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/pjopXW7mXqI?modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Elite Fencing Club Testimonial"></iframe></div>',
+      alt: "Elite Fencing Club Testimonial",
+      review: {
+        text: "It has been a great experience with Elite Fencing Club. The coaching is of a very high standard, with a strong focus on discipline, skill-building, and overall development. The coach is a person with excellent work ethics, very professional yet down to earth, making training both effective and enjoyable. The guidance and dedication provided have truly made a positive impact.",
+        name: "Elite Fencing Club Athlete",
+        role: "Fencing Student",
+      },
+    },
   ];
 
   return (
