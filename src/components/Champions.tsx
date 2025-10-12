@@ -33,12 +33,13 @@ const Champions = () => {
           type: "video",
           embedCode: `
             <video 
-              src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-09-03%20at%2021.43.27_9666503d.mp4?updatedAt=1760244278643" 
+              src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-09-03%20at%2021.43.27_9666503d.mp4?updatedAt=1760244278643"
               autoplay 
               muted 
               loop 
+              controls 
               playsinline 
-              class="w-full h-full object-cover rounded-2xl">
+              class="w-full h-full object-contain rounded-2xl bg-black">
             </video>
           `,
         },
@@ -54,12 +55,13 @@ const Champions = () => {
       type: "video",
       embedCode: `
         <video 
-          src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-08-29%20at%2018.29.09_03921933.mp4?updatedAt=1760244103722" 
+          src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-08-29%20at%2018.29.09_03921933.mp4?updatedAt=1760244103722"
           autoplay 
           muted 
           loop 
+          controls 
           playsinline 
-          class="w-full h-full object-cover rounded-2xl">
+          class="w-full h-full object-contain rounded-2xl bg-black">
         </video>
       `,
       alt: "Vajrajeet Date - Powerlifter Video",
@@ -85,12 +87,13 @@ const Champions = () => {
       type: "video",
       embedCode: `
         <video 
-          src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-10-11%20at%2017.32.04_35186e60.mp4?updatedAt=1760243924393" 
+          src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-10-11%20at%2017.32.04_35186e60.mp4?updatedAt=1760243924393"
           autoplay 
           muted 
           loop 
+          controls 
           playsinline 
-          class="w-full h-full object-cover rounded-2xl">
+          class="w-full h-full object-contain rounded-2xl bg-black">
         </video>
       `,
       alt: "Elite Fencing Club Athlete Video",
