@@ -31,8 +31,16 @@ const Champions = () => {
         },
         {
           type: "video",
-          embedCode:
-            '<iframe src="https://www.youtube.com/embed/kRbWKeZf7DU?autoplay=1&loop=1&mute=1&playlist=kRbWKeZf7DU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-2xl" title="Trisha Darveshi Badminton Video"></iframe>',
+          embedCode: `
+            <video 
+              src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-09-03%20at%2021.43.27_9666503d.mp4?updatedAt=1760244278643" 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              class="w-full h-full object-cover rounded-2xl">
+            </video>
+          `,
         },
       ],
       review: {
@@ -44,9 +52,17 @@ const Champions = () => {
     {
       id: 3,
       type: "video",
-      embedCode:
-        '<iframe src="https://www.youtube.com/embed/DopOExnr3dU?autoplay=1&loop=1&mute=1&playlist=DopOExnr3dU" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="w-full h-full rounded-2xl" title="Champion transformation video 2"></iframe>',
-      alt: "Champion transformation video 2",
+      embedCode: `
+        <video 
+          src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-08-29%20at%2018.29.09_03921933.mp4?updatedAt=1760244103722" 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          class="w-full h-full object-cover rounded-2xl">
+        </video>
+      `,
+      alt: "Vajrajeet Date - Powerlifter Video",
       review: {
         text: "Consistency and the right mentorship brought me here. Forever grateful to the team!",
         name: "Vajrajeet Date",
@@ -67,9 +83,17 @@ const Champions = () => {
     {
       id: 5,
       type: "video",
-      embedCode:
-        '<div style="padding-bottom: 56.25%; position: relative;"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/pjopXW7mXqI?modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Elite Fencing Club Testimonial"></iframe></div>',
-      alt: "Elite Fencing Club Testimonial",
+      embedCode: `
+        <video 
+          src="https://ik.imagekit.io/dsauihjso/WhatsApp%20Video%202025-10-11%20at%2017.32.04_35186e60.mp4?updatedAt=1760243924393" 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          class="w-full h-full object-cover rounded-2xl">
+        </video>
+      `,
+      alt: "Elite Fencing Club Athlete Video",
       review: {
         text: "It has been a great experience with Elite Fencing Club. The coaching is of a very high standard, with a strong focus on discipline, skill-building, and overall development. The coach is a person with excellent work ethics, very professional yet down to earth, making training both effective and enjoyable. The guidance and dedication provided have truly made a positive impact.",
         name: "Elite Fencing Club Athlete",
