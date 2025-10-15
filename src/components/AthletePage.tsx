@@ -3,10 +3,10 @@ import { Award, Target, Trophy, Heart } from "lucide-react";
 
 const CoachSection: React.FC = () => {
   const certifications = [
-    { name: "Certified Personal Trainer", icon: Award },
-    { name: "Sports Nutrition Specialist", icon: Target },
-    { name: "Bodybuilding Coach", icon: Trophy },
-    { name: "Wellness Coach", icon: Heart },
+    { name: "National Powerlifting Gold Medalist (×3)", icon: Award },
+    { name: "Strong Boy of India", icon: Target },
+    { name: "International Football (U17) Representative", icon: Trophy },
+    { name: "Marathon Finisher (21 km Satara / Ladakh High-Altitude)", icon: Heart },
   ];
 
   // 👇 Your Aditya Sandu images
