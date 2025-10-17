@@ -3,10 +3,12 @@ import { Award, Target, Trophy, Heart } from "lucide-react";
 
 const CoachSection: React.FC = () => {
   const certifications = [
-    { name: "National Powerlifting Gold Medalist (×3)", icon: Award },
-    { name: "Strong Boy of India", icon: Target },
-    { name: "International Football (U17) Representative", icon: Trophy },
-    { name: "Marathon Finisher (21 km Satara / Ladakh High-Altitude)", icon: Heart },
+    { name: "Bachelors in Sports and Exercise Science", icon: Award },
+    { name: "Masters in Strength and Conditioning", icon: Target },
+    { name: "CIMSPA certified Level 3 Personal Trainer", icon: Trophy },
+    { name: "ASCA Level 1 accredited Strength and Conditioning Coach", icon: Heart },
+    { name: "Team Boss Advance Physique Transformation and Nutrition Level 1 & 2 certified", icon: Award },
+    { name: "Team Boss Bodybuilding Contest Prep certification", icon: Target },
   ];
 
   // 👇 Your Aditya Sandu images
